@@ -24,3 +24,6 @@ test('should handle different delimeters',()=>{
     expect(add('//;\n2;3')).toBe(5);
 }
 );
+test('should throw an exception for a negative number', () => {
+  expect(() => add('1,-2')).toThrow('negative numbers not allowed -2');
+});
